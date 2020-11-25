@@ -94,7 +94,7 @@ const Navbar = () => {
                     </li>
                     <li className='nav-items'>
                     <Link className='links up' to='/profile'>
-                         User Profile
+                         Perfil
 
                     </Link>
                     </li>
@@ -123,7 +123,7 @@ const Navbar = () => {
                 </div>
 
                 <div className='user-loggedIn'>
-                <p className='disappear'>Hello, {name} !</p>
+                <p className='disappear'>Hola, {name} !</p>
                     <button className='disappear' onClick={logout}>Logout</button>
                 </div>
 
