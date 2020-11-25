@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import './Navbar.css'
 import {time, fullTime} from '../../../time'
 import {checkCookie, getCookie, deleteCookie} from '../../../cookies'
-//import SideNav from '../../SideNav/SideNav'            <SideNav/>
+//import SideNav from '../../SideNav/SideNav'            <SideNav/>                       
+
 
 
 const Navbar = () => {
@@ -71,19 +72,21 @@ const Navbar = () => {
     return (
         <div>
             <div className='navbar'>
-                <h1 onClick={()=>window.location.replace('/')} className='navbar-logo'>
-                    Barber Shop
+
+                <h1>                      
+                     <Link className='navbar-logo' to='/'>
+                          Barbería Shop
+                     </Link>
                 </h1>
                 <ul className='navbar-ul'>
                     <li className='nav-items'>
-                        <a href="./#hero-navigate" className='links'>Home</a>
+
+                        
                     </li>
                     <li className='nav-items'>
-                        <a href="./#what-we-do" className='links'>Service</a> 
+                     
                     </li>
-                    <li className='nav-items'>
-                        <a href="./#hours-navigate" className='links'> Hours</a>
-                    </li>
+                     
                     <li className='nav-items'>
                         <Link className='links cp' to='/admin'>
                             Control Panel
@@ -120,7 +123,7 @@ const Navbar = () => {
                 </div>
 
                 <div className='user-loggedIn'>
-                    <p className='disappear'>Hello, {name} !</p>
+                <p className='disappear'>Hello, {name} !</p>
                     <button className='disappear' onClick={logout}>Logout</button>
                 </div>
 
