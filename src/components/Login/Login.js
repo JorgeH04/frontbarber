@@ -27,8 +27,9 @@ const Login = (props) => {
         let userData = {}
         userData.email = email
         userData.pass = pass
-
-        let response = await axios.post('http://localhost:3000/login', userData)
+        
+        //let response = await axios.post('http://localhost:3000/login', userData)
+        let response = await axios.post('https://barberxy.netlify.app/login', userData)
         let {id, status, error, name, admin, phone} = response.data
         if(error){
             loading.style.display = 'none'

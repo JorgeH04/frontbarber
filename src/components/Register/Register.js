@@ -29,8 +29,8 @@ const Register = (props) => {
         userData.confirmPass = confirmPass
        
         
-        //let response =  await axios.post('https://barber-appointments.herokuapp.com/register', userData)
-        let response =  await axios.post('http://localhost:3000/register', userData)
+        let response =  await axios.post('https://barberxy.netlify.app/register', userData)
+        //let response =  await axios.post('http://localhost:3000/register', userData)
         let {error} = response.data
         if(error){
             loading.style.display = 'none'

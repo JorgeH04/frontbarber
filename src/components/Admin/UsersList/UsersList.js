@@ -8,8 +8,8 @@ const UserList = () => {
 
     useEffect(()=>{
         console.log('user list rendred')
-        axios.get('http://localhost:3000/getusers').then((response) => {
-
+       // axios.get('http://localhost:3000/getusers').then((response) => {
+        axios.get('https://barberxy.netlify.app/getusers').then((response) => {
         
             let {error} = response.data
             if(error){
@@ -26,7 +26,8 @@ const UserList = () => {
 
         console.log('deleting user: ', id)
 
-        let response = await axios.post('http://localhost:3000/deleteacc', {id:id})
+        //let response = await axios.post('http://localhost:3000/deleteacc', {id:id})
+        let response = await axios.post('https://barberxy.netlify.app/deleteacc', {id:id})
         let {error} = response.data
         if(error){
             alert(error)
