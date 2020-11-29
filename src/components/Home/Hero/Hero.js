@@ -10,9 +10,15 @@ const Hero = () => {
                 <h1 className='hero-h1'>We Make Amazing Haircuts</h1>
                 <div className='hero-para-div'>
                     <p className='hero-para'>
-                        The Barberia opened in the fall of 1989. We specialize in
-                        cutting mens hair and shaving their faces. Let's see 
-                        all our awesome features below! Thanks for choose us!
+                    Desde 2015 nos dedicamos a mejorar la imagen de nuestros clientes.
+
+                   El objetivo es brindar el mejor servicio y marcar tendencia.
+
+                   Por eso construimos un espacio en el mundo para que disfrutes y te sientas cómodo.
+
+                   Queremos que Barbería Shop sea tu lugar donde, más allá de cambiar tu look,
+
+                   puedas relajarte, disfrutar de una buena cerveza y encontrarte con amigos.
                     </p>
                 </div>
                 <Link to='/appointment'>

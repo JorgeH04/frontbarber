@@ -118,13 +118,13 @@ const Navbar = () => {
                 
                     <span className='log-reg-separator disappear'> / </span>
                     <Link className='links disappear' to='/register'>
-                        Register
+                        Registrarse
                     </Link>
                 </div>
 
                 <div className='user-loggedIn'>
                 <p className='disappear'>Hola, {name} !</p>
-                    <button className='disappear' onClick={logout}>Logout</button>
+                    <button className='disappear' onClick={logout}>Cerrar Sesión</button>
                 </div>
 
             

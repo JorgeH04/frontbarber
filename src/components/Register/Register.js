@@ -29,7 +29,7 @@ const Register = (props) => {
         userData.confirmPass = confirmPass
        
         
-        let response =  await axios.post('https://barberxy.netlify.app/register', userData)
+        let response =  await axios.post('https://backbarber.herokuapp.com/register', userData)
         //let response =  await axios.post('http://localhost:3000/register', userData)
         let {error} = response.data
         if(error){
@@ -58,7 +58,7 @@ const Register = (props) => {
             <div className='register-container'>
                 <div className='register-form'>
                     <div className='register-info'>
-                        <h1>Register</h1>
+                        <h1>Registrarse</h1>
                         <img src={logo} alt=''></img>
                     </div>
                     <div className='form-container'> 
@@ -72,14 +72,14 @@ const Register = (props) => {
                             name='email'    
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        <p>Password:</p>
+                        <p>Contraseña:</p>
                         <input type="password"
                             placeholder='Password...'
                             className='form-container-input'
                             name='password'
                             onChange={(e) => setPass(e.target.value)}
                         />
-                        <p>Confirm Password:</p>
+                        <p>Confirmar Contraseña:</p>
                         <input type="password"
                             placeholder='Password...'
                             className='form-container-input'
@@ -92,7 +92,7 @@ const Register = (props) => {
                         </div>
                         <div className='new-account-login'>
                             <Link to='/login' className='new-account-link'>
-                                Have account? <br/>Login Now!
+                                Tenés una cuenta? <br/>Iniciá Sesión ahora!
                             </Link> 
                         </div> 
                         <div className='login-div'>

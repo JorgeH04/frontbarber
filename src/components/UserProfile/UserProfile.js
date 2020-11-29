@@ -31,7 +31,7 @@ const UserProfile = (props) => {
     
     const getProfile = (userID) =>{
        // axios.get(`http://localhost:3000/profiledata?id=${userID}`).then((response) =>{
-        axios.get(`https://barberxy.netlify.app/profiledata?id=${userID}`).then((response) =>{
+        axios.get(`https://backbarber.herokuapp.com/profiledata?id=${userID}`).then((response) =>{
 
             let {error, email, name, phone } = response.data 
             if(error){
@@ -45,7 +45,7 @@ const UserProfile = (props) => {
                 console.log(response.data)
             }
         })
-        axios.get(`https://barberxy.netlify.app/userappointment?id=${userID}`).then((response) =>{
+        axios.get(`https://backbarber.herokuapp.com/userappointment?id=${userID}`).then((response) =>{
         ///axios.get(`http://localhost:3000/userappointment?id=${userID}`).then((response) =>{
             console.log(response.data)
 
@@ -74,7 +74,7 @@ const UserProfile = (props) => {
             obj.phone = updatedPhone
             obj.userID = getCookie('id')
 
-            axios.post('https://barberxy.netlify.app/updateprofile', obj).then((response) =>{
+            axios.post('https://backbarber.herokuapp.com/updateprofile', obj).then((response) =>{
            // axios.post('http://localhost:3000/updateprofile', obj).then((response) =>{
                 let {error} = response.data
 
@@ -115,7 +115,7 @@ const UserProfile = (props) => {
 
     const cancelAppointment = async() => {
 
-        let response = await axios.post('https://barberxy.netlify.app/cancelappointment', {id:getCookie('id')})
+        let response = await axios.post('https://backbarber.herokuapp.com/cancelappointment', {id:getCookie('id')})
         //let response = await axios.post('http://localhost:3000/cancelappointment', {id:getCookie('id')})
         console.log(response.data)
         let {error} = response.data

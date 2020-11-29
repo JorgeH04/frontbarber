@@ -73,7 +73,7 @@ const Appointment = (props) => {
         appointmentData.day = obj.day
         appointmentData.timeInMS = time
 
-        let response = await axios.post('https://barberxy.netlify.app/changeappointment', appointmentData)
+        let response = await axios.post('https://backbarber.herokuapp.com/changeappointment', appointmentData)
        //let response = await axios.post('http://localhost:3000/changeappointment', appointmentData)
         let { error } = response.data
         if(error){
@@ -101,7 +101,7 @@ const Appointment = (props) => {
         appointmentData.day = obj.day
         appointmentData.timeInMS = time
        
-        let response = await axios.post('http://localhost:3000/appointment', appointmentData)
+        let response = await axios.post('https://backbarber.herokuapp.com/appointment', appointmentData)
         let { error } = response.data
         if(error){
             setError(error)
@@ -142,12 +142,12 @@ const Appointment = (props) => {
             <Navbar/>
             <div className='appointment-container'>
                 <div className='appointment-form'>
-                    <h1>Make Appointment</h1>
+                    <h1>Reservar un turno</h1>
                     <div className='appointment-inner-container'>
                         {error !== '' ?  <ErrorMsg info={error}/>
                         
                         : ''}
-                        <p>Please choose date:<span className='red-astrix'>*</span></p>
+                        <p>Elija un día:<span className='red-astrix'>*</span></p>
                         <DatePicker
                             selected={startDate}
                             onChange={handleChange}
@@ -158,7 +158,7 @@ const Appointment = (props) => {
                         />
                     </div>
                     <div className='appointment-inner-container'>
-                        <p>Please choose time:<span className='red-astrix'>*</span></p>
+                        <p>Elija una hora:<span className='red-astrix'>*</span></p>
                         <Select
                             value={updatedOptions.filter((option) => {
                                 return option.value === userTime
@@ -170,7 +170,7 @@ const Appointment = (props) => {
                     </div>
 
                     <div id='appo-phone' className='appointment-inner-container'>
-                        <p>Lets be in touch: <span className='red-astrix'>*</span></p>
+                        <p>Celular: <span className='red-astrix'>*</span></p>
                         <input type="tel" className='phone-input' placeholder='phone...' 
                         value={phone ? phone : 'phone...'}
                         onChange={(e)=>setPhone(e.target.value)}/>
@@ -182,10 +182,10 @@ const Appointment = (props) => {
                         <button onClick={changeAppointment} className='appointment-btn'>Update</button>
                     </div>
                     <div className='appointment-data'>
-                        <h3>Appointment will be set for:</h3>
-                        <p>Date:  <span>{userDate}</span></p>
-                        <p>Hour: <span>{userTime}</span></p>
-                        <p>Phone: <span>{phone}</span></p>
+                        <h3>El turno será para:</h3>
+                        <p>Día:  <span>{userDate}</span></p>
+                        <p>Hora: <span>{userTime}</span></p>
+                        <p>Celular: <span>{phone}</span></p>
                     </div>
                 </div>
             </div> 
