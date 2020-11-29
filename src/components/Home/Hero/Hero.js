@@ -12,9 +12,7 @@ const Hero = () => {
                     <p className='hero-para'>
                     Desde 2015 nos dedicamos a mejorar la imagen de nuestros clientes.
 
-                   El objetivo es brindar el mejor servicio y marcar tendencia.
-
-                   Por eso construimos un espacio en el mundo para que disfrutes y te sientas cómodo.
+                   Construimos un espacio en el mundo para que disfrutes y te sientas cómodo.
 
                    Queremos que Barbería Shop sea tu lugar donde, más allá de cambiar tu look,
 
@@ -22,7 +20,7 @@ const Hero = () => {
                     </p>
                 </div>
                 <Link to='/appointment'>
-                    <button className='hero-btn'>Book Now</button>
+                    <button className='hero-btn'>Turnos</button>
                 </Link>
             </div>
         </div>
